@@ -25,7 +25,7 @@ def texter(name, works):
 
         # Send email here
         if not works:
-            server.sendmail(sender_email, receiver_email, "Scraper not working for {name} location, check xPath.")
+            server.sendmail(sender_email, receiver_email, f"Scraper not working for {name} location, check xPath.")
         else:
             server.sendmail(sender_email, receiver_email, f"Price for {name} location now ${price}.")
 
