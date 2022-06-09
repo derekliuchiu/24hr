@@ -28,7 +28,7 @@ def check_price(name):
     id_dict = {"AutoMall": "00493", "Milpitas": "00602"}
     id = id_dict[name]
 
-    with open("price.txt", "r") as f:
+    with open("~/24hr/price.txt", "r") as f:
         price_dict = json.loads(f.readline())
     
     driver.get(base_link + id)
@@ -39,7 +39,6 @@ def check_price(name):
             EC.presence_of_element_located((By.XPATH, x_path))
         )
         price = target.text.split()[0]
-        print(price)
     except:
         return None
     finally:
@@ -47,7 +46,7 @@ def check_price(name):
 
     if float(price) < float(price_dict[name]):
         price_dict[name] = price
-        with open("price.txt", "w") as f:
+        with open("~/24hr/price.txt", "w") as f:
             f.write(json.dumps(price_dict))
         return True
     

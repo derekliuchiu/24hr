@@ -1,1 +1,1 @@
-{"AutoMall": "100", "Milpitas": "99.97"}
+{"AutoMall": "99.97", "Milpitas": "99.97"}
