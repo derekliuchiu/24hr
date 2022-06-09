@@ -44,7 +44,7 @@ def check_price(name):
     finally:
         driver.quit()
 
-    if float(price) < float(price_dict[name]):
+    if float(price) < float(price_dict[name]) or float(price) == 1.00:
         price_dict[name] = price
         with open("/root/24hr/price.txt", "w") as f:
             f.write(json.dumps(price_dict))
