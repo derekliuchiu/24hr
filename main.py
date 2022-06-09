@@ -14,6 +14,5 @@ def main():
             texter("AutoMall", False)
         if milpitas == None:
             texter("Milpitas", False)
-    print("ran")
 if __name__ == "__main__":
     main()
