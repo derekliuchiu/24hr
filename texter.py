@@ -4,7 +4,7 @@ import json
 import os
 
 def texter(name, works):
-    with open("~/24hr/price.txt", "r") as f:
+    with open("root/24hr/price.txt", "r") as f:
         price_dict = json.loads(f.readline())
     price = price_dict[name]
 
